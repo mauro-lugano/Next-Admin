@@ -44,11 +44,14 @@ export async function updateInvoice(id: string, formData: FormData){
     status: formData.get('status'),
   });
   const amountInCents = amount * 100;
-  const date = new Date().toISOString().split('T')[0];
 
   await client.sql`
    UPDATE invoices
    SET customer_id = ${customerId}, amount = ${amountInCents}, status = ${status}
    WHERE id = ${id}
   `
+}
+
+export async function deleteInvoice(id: string) {
+  await client.sql `DELETE FROM invoices WHERE id=${id}`;
 }
