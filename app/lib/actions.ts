@@ -37,9 +37,9 @@ export async function createInvoice(formData: FormData) {
     console.log(error)
   }
 
+  revalidatePath('/dashabord/invocies');
+  redirect('dashboard/invoices');
 
-  // revalidatePath('/dashabord/invocies');
-  // redirect('dashboard/invoices');
 }
 
 const UpdateInvoice = FormSchema.omit({ id: true, date: true })
