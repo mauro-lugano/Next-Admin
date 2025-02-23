@@ -37,9 +37,9 @@ export async function createInvoice(formData: FormData) {
     console.log(error)
   }
 
-
   // revalidatePath('/dashabord/invocies');
   // redirect('dashboard/invoices');
+
 }
 
 const UpdateInvoice = FormSchema.omit({ id: true, date: true })
@@ -60,6 +60,9 @@ export async function updateInvoice(id: string, formData: FormData){
   } catch (error) {
     console.log(error)
   }
+
+  // revalidatePath('/dashabord/invocies');
+  // redirect('dashboard/invoices');
 }
 
 export async function deleteInvoice(id: string) {
