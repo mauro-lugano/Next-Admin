@@ -37,8 +37,8 @@ export async function createInvoice(formData: FormData) {
     console.log(error)
   }
 
-  revalidatePath('/dashabord/invocies');
-  redirect('dashboard/invoices');
+  // revalidatePath('/dashabord/invocies');
+  // redirect('dashboard/invoices');
 
 }
 
@@ -61,8 +61,8 @@ export async function updateInvoice(id: string, formData: FormData){
     console.log(error)
   }
 
-  revalidatePath('/dashabord/invocies');
-  redirect('dashboard/invoices');
+  // revalidatePath('/dashabord/invocies');
+  // redirect('dashboard/invoices');
 }
 
 export async function deleteInvoice(id: string) {
